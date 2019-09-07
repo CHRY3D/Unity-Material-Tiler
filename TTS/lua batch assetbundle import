@@ -1,0 +1,18 @@
+function spawnAssets()
+  local primary = "" -- Primary Assetbundle
+  local secondary = "" -- Secondary Assetbundle (materials?)
+  local amount = 0 -- Amount of Assets to load
+  for i=1, amount do
+    local obj = spawnObject({
+      type="Custom_AssetBundle",
+      position={0, 2 + i, 0},
+      scale={1,1,1}
+    })
+    obj.setCustomObject({
+        type=0, --0:Generic, 1:Figurine, 2:Dice, 3:Coin, 4:Board, 5:Chip(not supported), 6:Bag, 7:Infinite Bag
+        assetbundle=primary .. i .. ".unity3d",
+        assetbundle_secondary=""
+        --assetbundle_secondary=secondary .. ".unity3d"
+    })
+  end
+end
