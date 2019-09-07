@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEditor;
 
 [CustomEditor(typeof(MaterialTiler))]
-public class TTSTilerEditor : Editor {
+public class MaterialTilerEditor : Editor {
     private string dirName;
     private float tilingX;
     private float offsetX;
